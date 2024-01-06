@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Check if PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE environment variable is not set."
+    exit 1
+fi
+
+# Extract the file name and extension
+file_name=$(basename "$PYFILE")
+file_base_name="${file_name%.*}"
+extension="${file_name##*.}"
+
+# Check if the file has a .py extension
+if [ "$extension" != "py" ]; then
+    echo "Error: The specified file is not a Python script."
+    exit 1
+fi
+
+# Compile thompile and set __pycache__ to empty string
+output_file="${file_base_name}.pyc"
+echo "Compiling $PYFILE ..."
+python3 -m py_compile -b -x "" "$PYFILE"
+
