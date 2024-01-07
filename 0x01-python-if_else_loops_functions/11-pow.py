@@ -8,5 +8,5 @@ def pow(a, b):
     else:
         result = 1.0
         for _ in range(int(abs(b))):
-            result *= (a)
+            result /= int(a)
         return result
