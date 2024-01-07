@@ -6,5 +6,5 @@ def uppercase(in_str):
             uppercase_char = char(ascii_value - ord('a') + ord('A'))
         else:
             uppercase_char = char
-        print(uppercase_char, end=" ")
+        print("{}".format(uppercase_char), end=" ")
     print( )
