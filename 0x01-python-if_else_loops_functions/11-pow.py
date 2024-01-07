@@ -2,8 +2,8 @@
 def pow(a, b):
     if b >= 0:
         result = 1
-        for _ in range(b):
-            result *= (a)
+        for _ in range(int(b)):
+            result *= int(a)
         return result
     else:
         result = 1.0
