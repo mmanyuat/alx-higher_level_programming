@@ -1,6 +1,14 @@
 #!/usr/bin/python3
+"""
+module for defining a class
+"""
+
 class Square:
-    """This is documentation for the square class
-    an empty class
+    """
+    A class that represent a square
+
+    Attributes: No attributes
+
+    Methods: No methods
     """
     pass
