@@ -62,3 +62,16 @@ class Rectangle:
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
+
+    def __del__(self):
+        print("Bye rectangle...")
+
+    if __name__ == "__main__":
+        my_rectangle = Rectangle(2, 4)
+        print(f"Area: {my_rectangle.area()} - Perimeter: {my_rectangle.perimeter()}")
+        del my_rectangle
+
+        try:
+            print(my_rectangle)
+        except Exception as e:
+            print("[{}] {}".format(e.__class__.__name__, e))
