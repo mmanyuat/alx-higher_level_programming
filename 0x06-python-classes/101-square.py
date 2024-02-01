@@ -65,4 +65,13 @@ class Square:
                 result += "\n"
             for _ in range(self.size):
                 result += " " * self.position[0] + "#" * self.size + "\n"
-        return result.strip()
+        return result.strip('\n')
+    
+if __name__ == "__main__":
+    my_sqaure = Square(5, (0, 0))
+    print(my_square)
+
+    print("--")
+
+    my_square = Square(5, (4, 1))
+    print(my_square)
