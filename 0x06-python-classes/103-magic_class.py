@@ -1,10 +1,19 @@
 #!/usr/bin/python3
-import math
 """
 imported math module
 """
 
+
 class MagicClass:
+    """
+    class that reprsent magicclass
+    attriubtes:
+    radius
+
+    mthods:
+    __init, __radius, area, circumferecn
+    """
+
     def __init__(self, radius=0):
         self.__radius = 0
 
@@ -14,7 +23,7 @@ class MagicClass:
         self.__radius = radius
 
         def area(self):
-            return self.__radius ** 2 * math.pi
+            return self.__radius ** 2 * 3.141592653589793
 
         def circumference(self):
-            return 2 * math.pi * self.__radius
+            return 2 * 3.141592653589793 * self.__radius
