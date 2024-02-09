@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Module is to provide a function for json serialation
+"""
+
 import json
 
 
