@@ -115,11 +115,22 @@ class Rectangle(Base):
         """
         function that display a #
         """
-
+        for _ in range(self.y):
+            print()
         for _ in range(self.height):
-            print("#" * self.width)
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """ String representation of Rectangle """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        """ function update """
+        if args:
+            attrs = ['id', 'width', 'height', 'x', 'y']
+            for i, arg in enumerate(args):
+                setattr(self, attrs[i], arg)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
