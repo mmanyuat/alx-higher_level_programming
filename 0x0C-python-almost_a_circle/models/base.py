@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-"""
-NOthing imported
-"""
+"""Nothing imported here"""
 
 
 class Base:
-    """
-    Class that represents base class
-    private attributes: __nb_objects = 0
-    class constructor: def __init__(self, id=None):
-    """
+    """ A class that represents the base"""
 
     __nb_objects = 0
 
