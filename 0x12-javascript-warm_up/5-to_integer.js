@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const args = process.argv;
+const args = process.argv.slice(2);
 
 args.forEach(arg => {
   const num = Number(arg);
