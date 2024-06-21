@@ -25,9 +25,11 @@ if __name__ == "__main__":
             )
     cursor = db.cursor()
     query = """
-    SELECT id, name FROM states
-    Where name LIKE 'N%' ORDER
-    BY id ASC
+    SELECT MIN(id), name
+    FROM states
+    WHERE name LIKE 'N%'
+    GROUP BY name
+    ORDER BY MIN(id) ASC
     """
     cursor.execute(query)
     rows = cursor.fetchall()
