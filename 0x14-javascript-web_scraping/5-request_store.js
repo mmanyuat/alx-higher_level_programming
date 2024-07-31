@@ -4,14 +4,14 @@ const fs = require('fs');
 const request = require('request');
 
 const url = process.argv[2];
-const filepath = process.argv[3];
+const filePath = process.argv[3];
 
 request(url, (error, response, body) => {
   if (error) {
-    console.log('Error:', error);
+    console.error('Error:', error);
     return;
   }
-  fs.writeFile(filepath, body, 'utf8', (err) => {
+  fs.writeFile(filePath, body, 'utf8', (err) => {
     if (err) {
       console.log('Error writing to file:', err);
       return;
