@@ -19,4 +19,3 @@ request.get(apiUrl, (error, response, body) => {
   const data = JSON.parse(body);
   console.log(data.title);
 });
-//
