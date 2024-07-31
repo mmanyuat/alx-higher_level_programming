@@ -8,8 +8,10 @@ request(apiurl, (error, response, body) => {
     console.log('Error:', error);
     return;
   }
-  const films = JSON.parse(body);
+  const data = JSON.parse(body);
+  const films = data.results;
   let count = 0;
+
   if (response.statusCode !== 200) {
     console.error('Failed to retrieve data. Status code:', response.statusCode);
     return;
