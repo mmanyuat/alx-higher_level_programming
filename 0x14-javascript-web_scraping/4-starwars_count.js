@@ -8,14 +8,14 @@ request(apiurl, (error, response, body) => {
     console.log('Error:', error);
     return;
   }
-  const data = JSON.parse(body);
-  const films = data.results;
-  let count = 0;
 
   if (response.statusCode !== 200) {
     console.error('Failed to retrieve data. Status code:', response.statusCode);
     return;
   }
+  const data = JSON.parse(body);
+  const films = data.results;
+  let count = 0;
   films.forEach(film => {
     if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)) {
       count++;
