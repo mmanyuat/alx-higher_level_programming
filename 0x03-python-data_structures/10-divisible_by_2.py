@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """checking even or odd elements"""
 
+
 def divisible_by_2(my_list=[]):
     result = []
     for num in my_list:
